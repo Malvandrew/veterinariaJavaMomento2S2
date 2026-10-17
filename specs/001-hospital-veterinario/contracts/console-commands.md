@@ -18,6 +18,11 @@ reporte
 salir
 ```
 
+Los verbos y palabras reservadas de comando (`ingresar`, `perro`, `gato`, `ave`,
+`vacunar`, `asignar`, `medicar`, `alta`, `reporte` y `salir`) aceptan
+mayúsculas, minúsculas o combinaciones de ambas. Esta regla no cambia los
+argumentos ni los mensajes de respuesta.
+
 El argumento de vacunación acepta `si` o `no` sin distinguir mayúsculas y
 minúsculas. Los nombres duplicados también se comparan sin distinguir
 mayúsculas y minúsculas.

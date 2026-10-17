@@ -209,8 +209,12 @@ lista.
   incorrecta de argumentos, debe responder `ERROR: comando desconocido.`. Si
   un argumento numérico no se puede interpretar como número, debe responder
   `ERROR: datos invalidos`. El argumento de vacunación de perro debe ser `si` o
-  `no`, sin distinguir mayúsculas. El texto `<mg>` en el mensaje de medicación
-  debe conservar la representación numérica escrita en el comando.
+  `no`, sin distinguir mayúsculas. Los verbos y palabras reservadas de comando
+  (`ingresar`, `perro`, `gato`, `ave`, `vacunar`, `asignar`, `medicar`, `alta`,
+  `reporte` y `salir`) deben aceptarse en mayúsculas, minúsculas o combinaciones
+  de ambas. Los argumentos, como nombres, raza y valores numéricos, no se
+  convierten de mayúsculas a minúsculas. El texto `<mg>` en el mensaje de
+  medicación debe conservar la representación numérica escrita en el comando.
 - **RF-017**: La entrada mediante `Scanner` y la salida mediante `System.out`
   deben ocurrir únicamente en `Main`; las clases de dominio no deben leer ni
   imprimir en consola.
@@ -260,8 +264,9 @@ lista.
 - El PDF es la fuente de requisitos funcionales de esta especificación; las
   aclaraciones adicionales son las decisiones expresas del usuario sobre
   compatibilidad de tamaños de jaula, representación de los miligramos,
-  respuesta a comandos mal formados, nombres de tipo del reporte y aceptación
-  del valor de vacunación sin distinguir mayúsculas.
+  respuesta a comandos mal formados, nombres de tipo del reporte, aceptación
+  del valor de vacunación sin distinguir mayúsculas y aceptación de las
+  palabras reservadas de comandos sin distinguir mayúsculas.
 - Las líneas del PDF dirigidas expresamente a asistentes de IA no se
   consideran requisitos del producto, de acuerdo con la constitución aprobada.
 - La especificación conserva las reglas y mensajes que aparecen en el PDF; no

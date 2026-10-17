@@ -14,14 +14,14 @@ validación final se hará compilando y ejecutando los escenarios de
 **Propósito**: respetar la estructura plana de fuentes Java exigida para la
 entrega.
 
-- [ ] T001 Mantener todas las clases Java directamente en `src/`, sin paquetes, para compilar con `cd src && javac *.java`
+- [x] T001 Mantener todas las clases Java directamente en `src/`, sin paquetes, para compilar con `cd src && javac *.java`
 
 ## Fase 2: Base del dominio
 
 **Propósito**: crear las clases compartidas que requieren todas las historias.
 
-- [ ] T002 Crear `Paciente` como clase base normal, con atributos privados, setters que rechazan valores inválidos sin modificarlos, estado `String` restringido a `INGRESADO`, `CUARENTENA` o `EN_TRATAMIENTO`, dosis y referencia opcional a jaula en `src/Paciente.java`
-- [ ] T003 Crear `Jaula` con número, tamaño S/M/L, zona A/B y ocupante opcional; validar los setters y preparar operaciones que mantengan enlazados jaula y paciente en `src/Jaula.java`
+- [x] T002 Crear `Paciente` como clase base normal, con atributos privados, setters que rechazan valores inválidos sin modificarlos, estado `String` restringido a `INGRESADO`, `CUARENTENA` o `EN_TRATAMIENTO`, dosis y referencia opcional a jaula en `src/Paciente.java`
+- [x] T003 Crear `Jaula` con número, tamaño S/M/L, zona A/B y ocupante opcional; validar los setters y preparar operaciones que mantengan enlazados jaula y paciente en `src/Jaula.java`
 
 ## Fase 3: Historia 1 - Consultar y admitir pacientes (Prioridad: P1)
 
@@ -34,11 +34,11 @@ del hospital.
 
 ### Implementación
 
-- [ ] T004 [P] [US1] Crear `Perro` heredando de `Paciente`, con raza, vacunación, peso máximo 80 kg, factor de dosis 10 y estado inicial según vacunación en `src/Perro.java`
-- [ ] T005 [P] [US1] Crear `Gato` heredando de `Paciente`, con estrés de 0 a 10, peso máximo 15 kg y factor de dosis 6 en `src/Gato.java`
-- [ ] T006 [P] [US1] Crear `AveExotica` heredando de `Paciente`, con envergadura mayor que cero, peso máximo 15 kg y factor de dosis 3 en `src/AveExotica.java`
-- [ ] T007 [US1] Crear `Hospital` con `Paciente[10]`, contador, `Jaula[6]`, carga de los datos iniciales, búsqueda, validación de ingreso en el orden aprobado y generación del reporte en `src/Hospital.java`
-- [ ] T008 [US1] Crear el ciclo de consola y procesar los comandos de ingreso y `reporte`, mostrando los resultados de `Hospital` y terminando al leer `salir` en `src/Main.java`
+- [x] T004 [P] [US1] Crear `Perro` heredando de `Paciente`, con raza, vacunación, peso máximo 80 kg, factor de dosis 10 y estado inicial según vacunación en `src/Perro.java`
+- [x] T005 [P] [US1] Crear `Gato` heredando de `Paciente`, con estrés de 0 a 10, peso máximo 15 kg y factor de dosis 6 en `src/Gato.java`
+- [x] T006 [P] [US1] Crear `AveExotica` heredando de `Paciente`, con envergadura mayor que cero, peso máximo 15 kg y factor de dosis 3 en `src/AveExotica.java`
+- [x] T007 [US1] Crear `Hospital` con `Paciente[10]`, contador, `Jaula[6]`, carga de los datos iniciales, búsqueda, validación de ingreso en el orden aprobado y generación del reporte en `src/Hospital.java`
+- [x] T008 [US1] Crear el ciclo de consola y procesar los comandos de ingreso y `reporte`, mostrando los resultados de `Hospital` y terminando al leer `salir` en `src/Main.java`
 
 ## Fase 4: Historia 2 - Vacunar y asignar jaulas (Prioridad: P2)
 
@@ -50,9 +50,9 @@ por tamaño, zona y disponibilidad, incluidos los errores en su orden aprobado.
 
 ### Implementación
 
-- [ ] T009 [US2] Agregar a `Hospital` la búsqueda y validación de vacunación, con transición del perro a `INGRESADO` y los mensajes definidos en `src/Hospital.java`
-- [ ] T010 [US2] Agregar a `Hospital` el tamaño requerido, compatibilidad con jaulas del mismo tamaño o mayores, zona por especie, selección de la primera jaula libre y enlace recíproco en `src/Hospital.java`
-- [ ] T011 [US2] Procesar `vacunar <nombre>` y `asignar <nombre>` desde consola, respetando número de argumentos y mensajes definidos en `src/Main.java`
+- [x] T009 [US2] Agregar a `Hospital` la búsqueda y validación de vacunación, con transición del perro a `INGRESADO` y los mensajes definidos en `src/Hospital.java`
+- [x] T010 [US2] Agregar a `Hospital` el tamaño requerido, compatibilidad con jaulas del mismo tamaño o mayores, zona por especie, selección de la primera jaula libre y enlace recíproco en `src/Hospital.java`
+- [x] T011 [US2] Procesar `vacunar <nombre>` y `asignar <nombre>` desde consola, respetando número de argumentos y mensajes definidos en `src/Main.java`
 
 ## Fase 5: Historia 3 - Medicar y dar de alta (Prioridad: P3)
 
@@ -65,16 +65,18 @@ arreglo.
 
 ### Implementación
 
-- [ ] T012 [US3] Agregar en `Gato` el aumento de estrés de dos unidades sin superar 10, con nombre de método explícito, en `src/Gato.java`
-- [ ] T013 [US3] Agregar a `Hospital` la validación ordenada de medicación, conversión del texto de mg recibido, preservación de su representación original, acumulación y transición a `EN_TRATAMIENTO` en `src/Hospital.java`
-- [ ] T014 [US3] Agregar a `Hospital` el alta para pacientes en tratamiento, liberación de jaula y compactación de `Paciente[10]` en `src/Hospital.java`
-- [ ] T015 [US3] Procesar `medicar <nombre> <mg>` y `alta <nombre>`, y mostrar los mensajes devueltos por `Hospital` en `src/Main.java`
+- [x] T012 [US3] Agregar en `Gato` el aumento de estrés de dos unidades sin superar 10, con nombre de método explícito, en `src/Gato.java`
+- [x] T013 [US3] Agregar a `Hospital` la validación ordenada de medicación, conversión del texto de mg recibido, preservación de su representación original, acumulación y transición a `EN_TRATAMIENTO` en `src/Hospital.java`
+- [x] T014 [US3] Agregar a `Hospital` el alta para pacientes en tratamiento, liberación de jaula y compactación de `Paciente[10]` en `src/Hospital.java`
+- [x] T015 [US3] Procesar `medicar <nombre> <mg>` y `alta <nombre>`, y mostrar los mensajes devueltos por `Hospital` en `src/Main.java`
 
 ## Fase 6: Validación de entrega
 
 **Propósito**: verificar los requisitos aprobados y la ejecución descrita.
 
-- [ ] T016 Compilar con `javac *.java` desde `src/` y recorrer los escenarios de `specs/001-hospital-veterinario/quickstart.md`, comprobando límites, errores, mensajes y reportes
+- [x] T016 Compilar con `javac *.java` desde `src/` y recorrer los escenarios de `specs/001-hospital-veterinario/quickstart.md`, comprobando límites, errores, mensajes y reportes
+- [x] T017 Aceptar palabras reservadas de todos los comandos y el tipo de paciente de ingreso sin distinguir mayúsculas/minúsculas en `src/Main.java`
+- [x] T018 Documentar y validar ejemplos de comandos en mayúsculas, minúsculas y combinaciones en `specs/001-hospital-veterinario/spec.md`, `specs/001-hospital-veterinario/contracts/console-commands.md` y `specs/001-hospital-veterinario/quickstart.md`
 
 ## Dependencias y orden de ejecución
 

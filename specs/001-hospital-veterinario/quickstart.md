@@ -26,6 +26,22 @@ Comprobar que el reporte contiene Rocky, Misifu y Kiwi, los tipos
 `Perro`/`Gato`/`AveExotica`, los pesos `30.0`, `4.0` y `0.8`, estado
 `INGRESADO`, sin jaula asignada, y `Jaulas libres: 6`.
 
+## Comandos con mayúsculas o minúsculas
+
+```text
+REPORTE
+Ingresar GATO Nube 3 2
+aSiGnAr nube
+MEDICAR nube 1
+ALTA NUBE
+SaLiR
+```
+
+Comprobar que se reconocen los verbos y los tipos `GATO` en distintas
+combinaciones de mayúsculas/minúsculas, que el nombre `Nube` se conserva como
+argumento y que la salida mantiene exactamente las mayúsculas y mensajes
+definidos para el sistema.
+
 ## Registro, cuarentena y vacunación
 
 ```text
